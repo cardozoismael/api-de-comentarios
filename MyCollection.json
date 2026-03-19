@@ -1,0 +1,210 @@
+{
+  "info": {
+    "_postman_id": "8ff38899-7e79-4545-b4be-40eb393138e0",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51594900",
+    "_collection_link": "https://go.postman.co/collection/51594900-8ff38899-7e79-4545-b4be-40eb393138e0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "registrarse y obtener autorizacion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\":\"ismael\",\r\n    \"password\":123\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET/api",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<Bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api"
+          ]
+        },
+        "description": "_**obtener usuarios**_\n\nutilizando el token dado de endpoint \"/login\", obtienes todas las tareas de la carpeta comentarios ,se necesita el token"
+      },
+      "response": []
+    },
+    {
+      "name": "GET/api/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<Bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "1"
+          ]
+        },
+        "description": "_**obtener segun id**_\n\nobtienes el usuario segun el id que le indiques de la carpeta \"comentarios\" , se necesita el \"token\""
+      },
+      "response": []
+    },
+    {
+      "name": "POST/api",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<Bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\":\"robot prueba\",\r\n    \"comentario\":\"soy de prueba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            ""
+          ]
+        },
+        "description": "_**agregar usuario**_\n\nagregas un usuario a la \"comentarios\" , solo agregando los campos \"usuario\" y \"comentario\" , se necesita el token"
+      },
+      "response": []
+    },
+    {
+      "name": "PUT/api/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<Bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"comentario\":\"hola\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "7"
+          ]
+        },
+        "description": "_**modificar usuario**_\n\nen este endpoint puedes modificar el nombre del \"usuario\" o el \"comentario\" , se necesita el \"token"
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE/api/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<Bearer> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIzLCJub21icmUiOiJpc21hZWwiLCJpYXQiOjE3NzM5MjA4NzIsImV4cCI6MTc3MzkyNDQ3Mn0.sX-qVUOBhSgc5Xr3WvAFSBO98qczUFOOKBlvqt38gGc",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "6"
+          ]
+        },
+        "description": "_**eliminar usuario**_\n\npuedes eliminar el usuario segun el id que le indiques en el \"parametro\" , se nesecita \"token\""
+      },
+      "response": []
+    }
+  ]
+}
